@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "Cadastro")
-@NamedQuery(name = "Cadastro.findById", query = "SELECT c.nome FROM Cadastro c WHERE c.id_cadastro =:id")
+@NamedQuery(name = "Cadastro.findById", query = "SELECT c FROM Cadastro c WHERE c.id_cadastro =:id")
 public class Cadastro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
