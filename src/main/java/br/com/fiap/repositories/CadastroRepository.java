@@ -26,9 +26,9 @@ public class CadastroRepository {
     }
 
     public List<Cadastro> findByEmail(String email){
-        String jpql = "SELECT c FROM Cadastro c WHERE c.login.email LIKE '%:email%'";
+        String jpql = "SELECT c FROM Cadastro c WHERE c.login.email LIKE :email";
         Query query = entityManager.createQuery(jpql, Cadastro.class);
-        query.setParameter("email", email);
+        query.setParameter("email", "%" + email + "%");
         return  query.getResultList();
     }
 

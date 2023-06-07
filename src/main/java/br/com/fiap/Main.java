@@ -1,7 +1,6 @@
 package br.com.fiap;
 
-import br.com.fiap.repositories.CadastroRepository;
-import br.com.fiap.repositories.PesteRepository;
+import br.com.fiap.repositories.*;
 import jakarta.persistence.*;
 
 public class Main {
@@ -12,7 +11,9 @@ public class Main {
         var pesteRepository = new PesteRepository(entityManager);
         var cadastroRepository = new CadastroRepository(entityManager);
 
-        pesteRepository.findAll();
+        pesteRepository.findByNomePopular("Pulgão");
+        pesteRepository.findByNomeCientifico("Spodoptera frugiperda");
+        cadastroRepository.findById(1);
         cadastroRepository.findByEmail("mateus@fiap.com.br");
 
 

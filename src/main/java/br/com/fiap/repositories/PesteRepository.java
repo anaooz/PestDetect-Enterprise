@@ -19,16 +19,16 @@ public class PesteRepository {
     }
 
     public List<Peste> findByNomePopular(String nomePopular){
-        String jpql = "SELECT p FROM Peste p WHERE p.nomePopular LIKE '%:nome%'";
+        String jpql = "SELECT p FROM Peste p WHERE p.nomePopular LIKE :nomePopular";
         Query query = entityManager.createQuery(jpql, Peste.class);
-        query.setParameter("nomePopular", nomePopular);
+        query.setParameter("nomePopular", "%" + nomePopular + "%");
         return query.getResultList();
     }
 
     public List<Peste> findByNomeCientifico(String nomeCientifico){
-        String jpql = "SELECT p FROM Peste p WHERE p.nomeCientifico LIKE '%:nomeCientifico%'";
+        String jpql = "SELECT p FROM Peste p WHERE p.nomeCientifico LIKE :nomeCientifico";
         Query query = entityManager.createQuery(jpql, Peste.class);
-        query.setParameter("nomeCientifico", nomeCientifico);
+        query.setParameter("nomeCientifico", "%" + nomeCientifico + "%");
         return query.getResultList();
     }
 
