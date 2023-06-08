@@ -8,6 +8,9 @@ Repositório pro projeto Enterprise Application Development
 ```$ git clone https://github.com/anaooz/PestDetect-Enterprise.git```
 
 ---
+## Diagrama de Classes
+![Diagrama de Classes](https://github.com/anaooz/PestDetect-Enterprise/assets/69781921/fd7ab3d7-105b-49ac-b681-72de5de225d5)
+---
 ### Endpoints
 
 - Usuário
@@ -19,6 +22,7 @@ Repositório pro projeto Enterprise Application Development
     - [Lista](#lista-de-peste)
     - [Adicionar](#adicionar-peste)
     - [Editar](#editar-peste)
+
     - [Excluir](#excluir-peste)
 
 ---
